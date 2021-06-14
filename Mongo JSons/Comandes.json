@@ -1,0 +1,75 @@
+[{
+ 
+  "Comande_ID": "1",
+  "Total": "22.54",
+  "Cliente_id": "1",
+  "fecha_compra": "2020-05-05 00:00:01",
+  "Empleado":{
+    "Nom": "Cannonball Adderley"
+  },
+  "Ulleres_id": "3"
+  
+},{
+  
+  "Comande_ID": "2",
+  "Total": "2322.34",
+  "Cliente_id": "3",
+  "fecha_compra": "2020-08-01 00:00:01",
+  "Empleado":{"Nom": "Miles Davis"},
+  "Ulleres_id": "2"
+},{
+  
+  "Comande_ID": "3",
+  "Total": "2322.34",
+  "Cliente_id": "2",
+  "fecha_compra": "2020-04-10 00:00:01",
+  "Empleado":{ "Nom": "Coltrane"},
+  "Ulleres_id": "1"
+},{
+  
+  "Comande_ID": "4",
+  "Total": "2322.34",
+  "Cliente_id": "2",
+  "fecha_compra": "2020-10-10 00:00:01",
+  "Empleado":{ "Nom": "Coltrane"},
+  "Ulleres_id": "1"
+},{
+  
+  "Comande_ID": "5",
+  "Total": "2322.34",
+  "Cliente_id": "3",
+  "fecha_compra": "2021-01-12 00:00:01",
+  "Empleado":{
+    "Nom": "Charles Mingus"
+  },
+  "Ulleres_id": "5"
+},{
+ 
+  "Comande_ID": "6",
+  "Total": "2322.34",
+  "Cliente_id": "2",
+  "fecha_compra": "2020-04-21 00:00:01",
+  "Empleado":{
+    "Nom": "Charles Mingus"
+  },
+  "Ulleres_id": "4"
+},{
+ 
+  "Comande_ID": "7",
+  "Total": "2322.34",
+  "Cliente_id": "3",
+  "fecha_compra": "2020-03-24 00:00:01",
+  "Empleado":{
+    "Nom": "Charles Mingus"
+  },
+  "Ulleres_id": "4"
+},{
+  "Comande_ID": "8",
+  "Total": "2322.34",
+  "Cliente_id": "1",
+  "fecha_compra": "2021-06-05 00:00:01",
+  "Empleado":{
+        "Nom": "Charles Mingus"
+  },
+  "Ulleres_id": "4"
+}]

@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "60c684bea4491003b868e227"
+  },
+  "localitat_id": "1",
+  "nom": "Barcelona",
+  "provincia_id": "1"
+},{
+  "_id": {
+    "$oid": "60c684bea4491003b868e228"
+  },
+  "localitat_id": "2",
+  "nom": "Madrid",
+  "provincia_id": "1"
+},{
+  "_id": {
+    "$oid": "60c684bea4491003b868e229"
+  },
+  "localitat_id": "3",
+  "nom": "Girona",
+  "provincia_id": "1"
+}]
