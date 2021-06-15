@@ -5,5 +5,4 @@ StartShell.txt -> mongo use {yourdatabase}
                   mongo {paste comandes from file}
 ##
 
-StartWithNode.js -> npm install mongodb
-                    node startwithnode
+StartWithNode.js -> node startwithnode
