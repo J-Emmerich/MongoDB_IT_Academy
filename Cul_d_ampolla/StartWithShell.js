@@ -1,4 +1,6 @@
-
+conn = new Mongo()
+db.getMongo()
+/*
 db.clientes.insertMany([{
     "Cliente_id": "1",
   "Nom": "Linguado",
@@ -257,3 +259,4 @@ db.ulleres.insertMany([{
   "Adressa_id": "2"
 }])
 
+*/

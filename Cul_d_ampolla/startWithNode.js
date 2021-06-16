@@ -259,11 +259,10 @@ const ulleres = [{
   "fecha_registre": "2021-06-13 12:26:48",
   "Adressa_id": "2"
 }];
-
-
-
   const uri = 'mongodb://127.0.0.1:27017';
   const client = new MongoClient(uri);
+client.connect()
+
   async function run(collectionData,collectionName) {
     try {
       await client.connect();
