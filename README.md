@@ -1,8 +1,8 @@
 # MongoDB_IT_Academy
 
 ##
-StartShell.txt -> mongo use {yourdatabase}
-                  mongo {paste comandes from file}
+start.js -> mongo start.js
+
 ##
 
-StartWithNode.js -> node startwithnode
+StartWithNode.js -> node startwithnode (requires mongodb driver for node)
