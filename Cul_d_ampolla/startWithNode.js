@@ -1,81 +1,7 @@
 const { MongoClient } = require("mongodb");
 // Replace the uri string with your MongoDB deployment's connection string.
-const comandes = [{
-        
-    "Comande_ID": "1",
-    "Total": "22.54",
-    "Cliente_id": "1",
-    "fecha_compra": "2020-05-05 00:00:01",
-    "Empleado":{
-      "Nom": "Cannonball Adderley"
-    },
-    "Ulleres_id": "3"
-    
-  },{
-    
-    "Comande_ID": "2",
-    "Total": "2322.34",
-    "Cliente_id": "3",
-    "fecha_compra": "2020-08-01 00:00:01",
-    "Empleado":{"Nom": "Miles Davis"},
-    "Ulleres_id": "2"
-  },{
-    
-    "Comande_ID": "3",
-    "Total": "2322.34",
-    "Cliente_id": "2",
-    "fecha_compra": "2020-04-10 00:00:01",
-    "Empleado":{ "Nom": "Coltrane"},
-    "Ulleres_id": "1"
-  },{
-    
-    "Comande_ID": "4",
-    "Total": "2322.34",
-    "Cliente_id": "2",
-    "fecha_compra": "2020-10-10 00:00:01",
-    "Empleado":{ "Nom": "Coltrane"},
-    "Ulleres_id": "1"
-  },{
-    
-    "Comande_ID": "5",
-    "Total": "2322.34",
-    "Cliente_id": "3",
-    "fecha_compra": "2021-01-12 00:00:01",
-    "Empleado":{
-      "Nom": "Charles Mingus"
-    },
-    "Ulleres_id": "5"
-  },{
-    "Comande_ID": "6",
-    "Total": "2322.34",
-    "Cliente_id": "2",
-    "fecha_compra": "2020-04-21 00:00:01",
-    "Empleado":{
-      "Nom": "Charles Mingus"
-    },
-    "Ulleres_id": "4"
-  },{
-    
-    "Comande_ID": "7",
-    "Total": "2322.34",
-    "Cliente_id": "3",
-    "fecha_compra": "2020-03-24 00:00:01",
-    "Empleado":{
-      "Nom": "Charles Mingus"
-    },
-    "Ulleres_id": "4"
-  },{
-    
-    "Comande_ID": "8",
-    "Total": "2322.34",
-    "Cliente_id": "1",
-    "fecha_compra": "2021-06-05 00:00:01",
-    "Empleado":{
-          "Nom": "Charles Mingus"
-    },
-    "Ulleres_id": "4"
-  }]; 
-const clientes = [{
+
+const clients = [{
   "Cliente_id": "1",
 "Nom": "Linguado",
 "Cognoms": "Macalé",
@@ -128,7 +54,7 @@ const clientes = [{
 }
 }];
 
-const proveidor = [
+const suppliers = [
   {
      
       "Proveidor_ID": "1",
@@ -165,120 +91,29 @@ const proveidor = [
   }
 ];
 
-const ulleres = [{
-  
-  "Ulleres_id": "1",
-  "Marca": "Bamba",
-  "graduació_dreta": "-0.25",
-  "graduació_esquerra": "0.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "standard",
-  "color_muntura": "blanca",
-  "precio": "76.89",
-  "Proveidor_ID": "1"
-},{
-  
-  "Ulleres_id": "2",
-  "Marca": "Bamba",
-  "graduació_dreta": "2.25",
-  "graduació_esquerra": "-0.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "standard",
-  "color_muntura": "blanca",
-  "precio": "143.89",
-  "Proveidor_ID": "1"
-},{
-  
-  "Ulleres_id": "3",
-  "Marca": "Bacon",
-  "graduació_dreta": "-0.25",
-  "graduació_esquerra": "2.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "especial",
-  "color_muntura": "blanca",
-  "precio": "444.89",
-  "Proveidor_ID": "1"
-},{
-    "Ulleres_id": "4",
-  "Marca": "Merchan",
-  "graduació_dreta": "-0.25",
-  "graduació_esquerra": "0.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "standard",
-  "color_muntura": "blanca",
-  "precio": "176.66",
-  "Proveidor_ID": "2"
-},{
-  "Ulleres_id": "5",
-  "Marca": "Merchan",
-  "graduació_dreta": "-0.25",
-  "graduació_esquerra": "0.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "standard",
-  "color_muntura": "blanca",
-  "precio": "176.66",
-  "Proveidor_ID": "1"
-},{
-  "Ulleres_id": "6",
-  "Marca": "Miriade",
-  "graduació_dreta": "-0.25",
-  "graduació_esquerra": "0.6",
-  "color_dreta": "azul",
-  "color_esquerra": "azul",
-  "muntura": "standard",
-  "color_muntura": "blanca",
-  "precio": "323.66",
-  "Proveidor_ID": "2"
-},{
-  "Cliente_id": "1",
-  "Nom": "Linguado",
-  "Cognoms": "Macalé",
-  "Telefon": "3232323434",
-  "Email": "rafaelito@email.com",
-  "fecha_registre": "2021-06-13 12:26:48",
-  "Adressa_id": "3"
-},{
-  "Cliente_id": "2",
-  "Nom": "Rafael",
-  "Cognoms": "Mistura",
-  "Telefon": "33250987",
-  "Email": "rafaelito@email.com",
-  "fecha_registre": "2021-06-13 12:26:48",
-  "Adressa_id": "2"
-},{
-  "Cliente_id": "3",
-  "Nom": "Pizzara",
-  "Cognoms": "Parangolé",
-  "Telefon": "9995554432",
-  "Email": "macanuda@email.com",
-  "fecha_registre": "2021-06-13 12:26:48",
-  "Adressa_id": "2"
-}];
   const uri = 'mongodb://127.0.0.1:27017';
-  const client = new MongoClient(uri);
+  const client = new MongoClient(uri, {useUnifiedTopology : true} );
 client.connect()
 
   async function run(collectionData,collectionName) {
     try {
       await client.connect();
-      const database = client.db("Cul-D-Ampolla");
+      const database = client.db("optica");
       const collection = database.collection(collectionName);
-      
+      database.dropDatabase()
       // this option prevents additional documents from being inserted if one fails
       const options = { ordered: true };
       const result = await collection.insertMany(collectionData, options);
-      console.log(`${result.insertedCount} documents were inserted`);
-    } finally {
+      console.log(`${result.insertedCount} documents were inserted, in the ${collectionName} collection.`);
+    }catch(err){
+      let regex = /db already exists with different case/;
+      if(regex.test(err.message))
+      console.log("Unable to drop database with same name but different case. Error: ", err.message)
+    } 
+    finally {
       await client.close();
     }
   }
   
-  run(comandes, "comandes")
-  run(clientes, "clientes")
-  run(proveidor,"proveidor")
-  run(ulleres,"ulleres")
+  run(clients, "clients")
+  run(suppliers, "suppliers")
