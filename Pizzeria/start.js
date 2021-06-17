@@ -1,19 +1,25 @@
+db = connect('localhost:27017/pizzeria')
 
+print('*****DROP DATABASE******')
+db.dropDatabase()
+
+
+print('*****Insert documents to botiga collection******')
 db.botiga.insertMany([{
-   "Botiga_id": "1",
+  "Botiga_id": "1",
   "adreca":{
     "calle":"Marina 254",
     "codi_postal": "08041",
     "localitat_id": "1"
   }
 },{
-    "Botiga_id": "2",
+  "Botiga_id": "2",
   "adreca": 
   {
     "calle": "Fastenrath 66",
-  "codi_postal": "08041",
-  "localitat_id": "2"
-}
+    "codi_postal": "08041",
+    "localitat_id": "2"
+  }
 },{
   "Botiga_id": "3",
   "adreca":{
@@ -22,6 +28,7 @@ db.botiga.insertMany([{
     "localitat_id": "3"
   }
 }])
+print('*****Insert documents to cliente collection******')
 db.cliente.insertMany([{
   "cliente_id": "1",
   "Nom": "Mauri",
@@ -29,8 +36,8 @@ db.cliente.insertMany([{
   "telefon": "666666666",
   "adreca":{
     "calle": "Otro 2224",
-  "codi_postal": "08041",
-  "localitat_id": "2"
+    "codi_postal": "08041",
+    "localitat_id": "2"
   }
 },{
   "cliente_id": "2",
@@ -43,7 +50,7 @@ db.cliente.insertMany([{
     "localitat_id": "2"
   }
 },{
-   "cliente_id": "3",
+  "cliente_id": "3",
   "Nom": "Hendrix",
   "cognom": "Paloosa",
   "telefon": "666666666",
@@ -62,26 +69,27 @@ db.cliente.insertMany([{
     "codi_postal": "08041",
     "localitat_id": "2"
   }
-  }])
+}])
+print('*****Insert documents to comande collection******')
 db.comande.insertMany([{
   "comande_id": "1",
   "data_compra": "2021-01-20 00:00:01",
   "tipo": {
-  "repartir": true,
-  "empleat_id": "3",
-  "data_lliurament": "2021-01-20 00:00:01"    
+    "repartir": true,
+    "empleat_id": "3",
+    "data_lliurament": "2021-01-20 00:00:01"    
   },
-     "preu_total": "99.78",
+  "preu_total": "99.78",
   "Botiga_id": "1",
   "cliente_id": "1",
   "productes": [{
     "quantitat": "1",
-  "preu_cadascun": "8.99",
-  "producte_id": "4"
-  }, {"quantitat": "3",
     "preu_cadascun": "8.99",
-    "producte_id": "2"}]
-
+    "producte_id": "4"
+  }, {"quantitat": "3",
+  "preu_cadascun": "8.99",
+  "producte_id": "2"}]
+  
 },{
   "comande_id": "2",
   "data_compra": "2021-01-20 00:00:01",
@@ -94,16 +102,16 @@ db.comande.insertMany([{
   "cliente_id": "2",
   "productes": [{
     "quantitat": "2",
-  "preu_cadascun": "8.99",
-  "producte_id": "1"
-  }, {"quantitat": "2",
     "preu_cadascun": "8.99",
-    "producte_id": "3"},{"quantitat": "1",
-      "preu_cadascun": "8.99",
-      "producte_id": "1"}]
+    "producte_id": "1"
+  }, {"quantitat": "2",
+  "preu_cadascun": "8.99",
+  "producte_id": "3"},{"quantitat": "1",
+  "preu_cadascun": "8.99",
+  "producte_id": "1"}]
   
 },{
-    "comande_id": "3",
+  "comande_id": "3",
   "data_compra": "2021-01-20 00:00:01",
   "tipo": {
     "repartir": true,
@@ -115,11 +123,11 @@ db.comande.insertMany([{
   "cliente_id": "1",
   "productes":[{
     "quantitat": "4",
-  "preu_cadascun": "8.99",
-  "producte_id": "1"
+    "preu_cadascun": "8.99",
+    "producte_id": "1"
   }]
 },{
- 
+  
   "comande_id": "4",
   "data_compra": "2021-01-20 00:00:01",
   "tipo":
@@ -130,11 +138,11 @@ db.comande.insertMany([{
   "Botiga_id": "1",
   "cliente_id": "2",
   "productes":[{"quantitat": "1",
-    "preu_cadascun": "8.99",
-    "producte_id": "2"}]
+  "preu_cadascun": "8.99",
+  "producte_id": "2"}]
   
 },{
- 
+  
   "comande_id": "5",
   "data_compra": "2021-01-20 00:00:01",
   "tipo":{
@@ -146,11 +154,11 @@ db.comande.insertMany([{
   "cliente_id": "1",
   "productes":[{
     "quantitat": "3",
-  "preu_cadascun": "8.99",
-  "producte_id": "2"
-  },{"quantitat": "1",
     "preu_cadascun": "8.99",
-    "producte_id": "1"}]
+    "producte_id": "2"
+  },{"quantitat": "1",
+  "preu_cadascun": "8.99",
+  "producte_id": "1"}]
 },{
   "comande_id": "6",
   "data_compra": "2021-01-20 00:00:01",
@@ -162,10 +170,10 @@ db.comande.insertMany([{
   "Botiga_id": "1",
   "cliente_id": "2",
   "productes":[{"quantitat": "6",
-    "preu_cadascun": "8.99",
-    "producte_id": "2"}]
+  "preu_cadascun": "8.99",
+  "producte_id": "2"}]
 },{
-   "comande_id": "7",
+  "comande_id": "7",
   "data_compra": "2021-01-20 00:00:01",
   "tipo":{
     "repartir": false,
@@ -176,14 +184,15 @@ db.comande.insertMany([{
   "cliente_id": "1",
   "productes":[{
     "quantitat": "3",
-  "preu_cadascun": "8.99",
-  "producte_id": "4"
-
+    "preu_cadascun": "8.99",
+    "producte_id": "4"
+    
   }]}
 ]
-  )
+)
+print('*****Insert documents to empleat collection******')
 db.empleat.insertMany([{
-   "empleat_id": "1",
+  "empleat_id": "1",
   "Nom": "Pedro",
   "Cognom": "Andrade",
   "NIF": "y6464637e",
@@ -191,7 +200,7 @@ db.empleat.insertMany([{
   "tasca": "repartidor",
   "Botiga_id": 1
 },{
-   "empleat_id": "2",
+  "empleat_id": "2",
   "Nom": "Maic",
   "Cognom": "foooo",
   "NIF": "y6488837e",
@@ -207,8 +216,9 @@ db.empleat.insertMany([{
   "tasca": "cocinero",
   "Botiga_id": 1
 }])
+print('*****Insert documents to localitat collection******')
 db.localitat.insertMany([{
- 
+  
   "localitat_id": "1",
   "nom": "Barcelona",
   "provincia_id": "1"
@@ -218,20 +228,21 @@ db.localitat.insertMany([{
   "nom": "Madrid",
   "provincia_id": "1"
 },{
-
+  
   "localitat_id": "3",
   "nom": "Girona",
   "provincia_id": "1"
 }])
+print('*****Insert documents to producte collection******')
 db.producte.insertMany([{
-    "producte_id": "1",
+  "producte_id": "1",
   "nom": "Coca-Cola",
   "Tipo": "Bebida",
   "descripcio": "NULL",
   "imatge_url": "NULL",
   "preu": "3.50"  
 },{
-   "producte_id": "2",
+  "producte_id": "2",
   "nom": "4 quesos",
   "Tipo": "Pizza",
   "descripcio": "NULL",
@@ -241,7 +252,7 @@ db.producte.insertMany([{
     "nom": "Vegetarianas"
   }
 },{
-    "producte_id": "3",
+  "producte_id": "3",
   "nom": "Margherita",
   "Tipo": "Pizza",
   "descripcio": "NULL",
@@ -259,7 +270,7 @@ db.producte.insertMany([{
   "descripcio": "NULL",
   "imatge_url": "NULL",
   "preu": "3.50"
-  },{
+},{
   
   "producte_id": "5",
   "nom": "Peperoni",
@@ -271,7 +282,7 @@ db.producte.insertMany([{
     "nom": "tradicionales"
   }
 },{
-   "producte_id": "6",
+  "producte_id": "6",
   "nom": "Vegana",
   "Tipo": "Pizza",
   "descripcio": "NULL",
@@ -281,6 +292,7 @@ db.producte.insertMany([{
     "nom": "Vegana"
   }
 }])
+print('*****Insert documents to provincia collection******')
 db.provincia.insertMany([{
   
   "provincia_id": "1",
@@ -294,3 +306,5 @@ db.provincia.insertMany([{
   "provincia_id": "3",
   "Nom": "Málaga"
 }])
+
+print('***** END OF FILE ******')

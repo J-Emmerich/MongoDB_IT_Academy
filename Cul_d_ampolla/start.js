@@ -1,6 +1,14 @@
 
+let db = connect('localhost:27017/cul-ampolla');
+
+print('**********DROP DATABASE**********')
+
+db.dropDatabase()
+
+print('**********Insert documents into clientes collection**********')
+
 db.clientes.insertMany([{
-    "Cliente_id": "1",
+  "Cliente_id": "1",
   "Nom": "Linguado",
   "Cognoms": "Macalé",
   "Telefon": "3232323434",
@@ -15,7 +23,6 @@ db.clientes.insertMany([{
     "Codigo_Postal": "08035",
     "Pais": "ES"
   }
-
 },{
   
   "Cliente_id": "2",
@@ -26,12 +33,12 @@ db.clientes.insertMany([{
   "fecha_registre": "2021-06-13 12:26:48",
   "Adressa":{
     "Carrer": "Medeiros",
-  "Numero": "67",
-  "Piso": "1",
-  "Porta": "1",
-  "Ciutat": "Barcelona",
-  "Codigo_Postal": "08065",
-  "Pais": "ES"
+    "Numero": "67",
+    "Piso": "1",
+    "Porta": "1",
+    "Ciutat": "Barcelona",
+    "Codigo_Postal": "08065",
+    "Pais": "ES"
   }
 },{
   
@@ -51,8 +58,12 @@ db.clientes.insertMany([{
     "Pais": "ES"
   }
 }])
+
+print('**********Insert documents into comandes collection**********')
+
+
 db.comandes.insertMany([{
- 
+  
   "Comande_ID": "1",
   "Total": "22.54",
   "Cliente_id": "1",
@@ -97,7 +108,7 @@ db.comandes.insertMany([{
   },
   "Ulleres_id": "5"
 },{
- 
+  
   "Comande_ID": "6",
   "Total": "2322.34",
   "Cliente_id": "2",
@@ -107,7 +118,7 @@ db.comandes.insertMany([{
   },
   "Ulleres_id": "4"
 },{
- 
+  
   "Comande_ID": "7",
   "Total": "2322.34",
   "Cliente_id": "3",
@@ -122,46 +133,48 @@ db.comandes.insertMany([{
   "Cliente_id": "1",
   "fecha_compra": "2021-06-05 00:00:01",
   "Empleado":{
-        "Nom": "Charles Mingus"
+    "Nom": "Charles Mingus"
   },
   "Ulleres_id": "4"
 }])
+print('**********Insert documents into proveidor collection**********')
 db.proveidor.insertMany([
   {
-     
-      "Proveidor_ID": "1",
-      "NIF": "y44434567e",
-      "Nom": "Joao",
-      "Telefon": "88876578",
-      "Fax": "NULL",
-      "Adressa": {
-          "Carrer": "Marina",
-          "Numero": "67",
-          "Piso": "1",
-          "Porta": "1",
-          "Ciutat": "Barcelona",
-          "Codigo_Postal": "08034",
-          "Pais": "ES"
-      }
+    
+    "Proveidor_ID": "1",
+    "NIF": "y44434567e",
+    "Nom": "Joao",
+    "Telefon": "88876578",
+    "Fax": "NULL",
+    "Adressa": {
+      "Carrer": "Marina",
+      "Numero": "67",
+      "Piso": "1",
+      "Porta": "1",
+      "Ciutat": "Barcelona",
+      "Codigo_Postal": "08034",
+      "Pais": "ES"
+    }
   },
   {
-      
-      "Proveidor_ID": "2",
-      "NIF": "X8882332f",
-      "Nom": "Pamplona",
-      "Telefon": "2376578",
-      "Fax": "NULL",
-      "Adressa": {
-          "Carrer": "Fastenrath",
-          "Numero": "67",
-          "Piso": "1",
-          "Porta": "1",
-          "Ciutat": "Barcelona",
-          "Codigo_Postal": "08044",
-          "Pais": "ES"
-      }
+    
+    "Proveidor_ID": "2",
+    "NIF": "X8882332f",
+    "Nom": "Pamplona",
+    "Telefon": "2376578",
+    "Fax": "NULL",
+    "Adressa": {
+      "Carrer": "Fastenrath",
+      "Numero": "67",
+      "Piso": "1",
+      "Porta": "1",
+      "Ciutat": "Barcelona",
+      "Codigo_Postal": "08044",
+      "Pais": "ES"
+    }
   }
 ])
+print('**********Insert documents into ulleres collection**********')
 db.ulleres.insertMany([{
   
   "Ulleres_id": "1",
@@ -199,7 +212,7 @@ db.ulleres.insertMany([{
   "precio": "444.89",
   "Proveidor_ID": "1"
 },{
-    "Ulleres_id": "4",
+  "Ulleres_id": "4",
   "Marca": "Merchan",
   "graduació_dreta": "-0.25",
   "graduació_esquerra": "0.6",
@@ -257,3 +270,5 @@ db.ulleres.insertMany([{
   "Adressa_id": "2"
 }])
 
+
+print('**********END OF FILE**********')
